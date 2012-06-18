@@ -1,0 +1,35 @@
+#!/usr/bin/env coffee
+
+#
+# Generate
+#     bm-generate folder options
+#
+#
+#
+argv  = require("optimist")
+  .usage("Generate new bookmarklet project\nUsage: bm-generator folder [options]")
+  .alias("g", "git")
+  .describe("g", "create git repository")
+  .alias("z","zepto")
+  .describe("z", "add zepto to bookmarklet")
+  .alias("S", "s3")
+  .describe("S", "add upload to s3 bucket command (specify path: BUCKET/path)")
+  .demand("u")
+  .alias("u", "url")
+  .describe("u", "Traget url for bookmarklet")
+  .argv
+
+rl = require "readline"
+bmg = require "../lib"
+
+unless argv._[0]
+  i = rl.createInterface process.stdin, process.stdout, null
+  i.question "Folder name: ", (folder) ->
+    i.close()
+    process.stdin.destroy()
+    bmg.createProject folder, argv
+else
+  bmg.createProject argv._[0], argv
+
+
+

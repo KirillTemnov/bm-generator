@@ -1,0 +1,18 @@
+{
+  "author": "selead",
+  "name": "bm-generator",
+  "description": "Generate bookmarklet project",
+  "version": "0.1.8",
+  "repository": {
+    "url": ""
+  },
+  "bin": "./bin/bm-generator",
+  "main": "index.coffee",
+  "engines": {
+    "node": "0.6.x"
+  },
+  "dependencies": {
+      "optimist": "*"
+  },
+  "devDependencies": {}
+}
