@@ -32,7 +32,7 @@ exports.createProject = (folder, opts) ->
     generator.push "cat resources/*.js >  out/#{outName}.js"
   generator.push "coffee -c *.coffee && cat *.js >> out/#{outName}.js"
   if opts.s3
-    generator.push "s3cmd put out/#{outName}.js s3://#{opts.s3}/#{outName}.js"
+    generator.push "s3cmd put out/#{outName}.js s3://#{opts.s3}/#{outName}.js -P"
 
   # first create generator file
   # ...
@@ -40,7 +40,7 @@ exports.createProject = (folder, opts) ->
   writeToFile "./#{folder}/#{bmCopy}", "javascript:(function(){X = document.createElement(\"SCRIPT\");X.src = \"#{opts.url}\";document.getElementsByTagName('head')[0].appendChild(X);})()"
   writeToFile "./#{folder}/#{mainScriptName}.coffee", """# PUT CODE HERE
 ( ->
-)
+)()
 """
   commands.push "chmod +x generator"
 
