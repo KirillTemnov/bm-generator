@@ -1,18 +1,16 @@
 {
-  "author": "selead",
-  "name": "bm-generator",
-  "description": "Generate bookmarklet project",
-  "version": "0.1.8",
-  "repository": {
-    "url": ""
-  },
-  "bin": "./bin/bm-generator",
-  "main": "index.coffee",
-  "engines": {
-    "node": "0.6.x"
-  },
-  "dependencies": {
-      "optimist": "*"
-  },
-  "devDependencies": {}
+    "author": "Temnov Kirill, @selead"
+  ,  "name": "bm-generator"
+  ,  "description": "Generate bookmarklet project"
+  ,  "version": "0.2.0"
+  ,  "repository": {
+         "type": "git"
+       , "url": "https://github.com/selead/bm-generator"
+      }
+  ,  "bin": "./bin/bm-generator"
+  ,  "main": "index.coffee"
+  ,  "engines": { "node": "0.6.x"}
+  ,  "dependencies": {
+        "optimist"      : "*"
+    }
 }

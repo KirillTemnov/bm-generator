@@ -7,7 +7,7 @@
 #
 #
 argv  = require("optimist")
-  .usage("Generate new bookmarklet project\nUsage: bm-generator folder [options]")
+  .usage("bm-generator 0.2.0\nGenerate new bookmarklet project.\nUsage: bm-generator folder [options]")
   .alias("g", "git")
   .describe("g", "create git repository")
   .alias("z","zepto")
