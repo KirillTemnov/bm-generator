@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/selead/bm-generator.png)](http://travis-ci.org/selead/bm-generator)
 # Bookmarklet project generator
 
 Quick way to create bookmarklet from command line.
